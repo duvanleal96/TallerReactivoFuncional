@@ -4,7 +4,7 @@ package org.sofkau.exercice1;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Excercice1 {
+public class Exercice1 {
     List<Correo> correoList = DataUtil.getCorreos();
 
     /**
@@ -12,7 +12,7 @@ public class Excercice1 {
      * implementa el .distinc()
      */
     public List<String> eliminarCorreoRepetido(){
-            var lista=    correoList.stream()
+            var lista=correoList.stream()
                 .map(correo -> correo.getCorreo()).distinct()
                     .collect(Collectors.toList());
                 return lista;
@@ -48,7 +48,7 @@ public class Excercice1 {
      * o mas invalidos retorna false
      */
     public Boolean validarCondicionCorreo(){
-        Boolean validado= correoList.stream()
+        Boolean validado = correoList.stream()
                 .map(e-> e.getCorreo())
                 .map(a->a.matches("^[a-zA-Z0-9_!#$%&'*+/=?{|}~^.-]+@[a-zA-Z0-9.-]+\\.[A-Za-z]{2,4}"))
                .reduce((i,k)->i&k)
@@ -93,7 +93,7 @@ public class Excercice1 {
     }
 
     /**
-     * busca en la lista los correos que ya han sido enviados
+     * busca en la lista si se envio algun correo , si es asi , cambia el estado
      * @return
      */
     public List<Correo> envioCorreo(String correo){
