@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Data {
-    public static List<Palabra> gePalabra(){
+    public static List<Palabra> getPalabra(){
         List<Palabra> result = new ArrayList<Palabra>();
         result.add(new Palabra("puto"));
         result.add(new Palabra("idiota"));
