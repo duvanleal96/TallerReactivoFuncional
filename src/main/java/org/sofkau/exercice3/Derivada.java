@@ -4,6 +4,12 @@ import java.util.function.BiFunction;
 import java.util.function.Function;
 
 public class Derivada {
+    /**
+     * Metodo calcular derivada de un monomio
+     * @param cociente
+     * @param exponente
+     *
+     */
     public String calcularDerivada(double cociente, double exponente){
 
         BiFunction<Double,Double,Double> result = (value,value1)-> value*value1;

@@ -4,7 +4,12 @@ import java.util.function.BiFunction;
 import java.util.function.Function;
 
 public class Integral {
-
+    /**
+     * Metoco calcular Integral de un monomio
+     * @param cociente
+     * @param exponente
+     * 
+     */
     public String calcularIntegral(double cociente, double exponente){
         BiFunction<Double,Double,Double> result = (value, value1)->
             (value / (value1 + 1) == 1) ? 1.0 : value / (value1 + 1);
